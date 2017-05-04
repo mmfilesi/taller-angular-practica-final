@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>angular 1.6 workshop</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="app/styles/main.css">
+</head>
+
+<body ng-app="app" ng-strict-di>
+    <!-- contenido html principal -->
+    <section class="main-container">
+      <!-- Como la cabecera y el footer son comunes a toda la aplicación,
+      no los incluimos en el <ui-view>-->
+      <main-header></main-header>
+      <ui-view></ui-view>
+      <main-footer></main-footer>
+    </section>
+
+     <!-- carga de scripts (siempre en el footer). Primero las piezas de angular y luego ya nuestro código js -->
+     
+    <!-- Todo lo que se encuentre entre los comentarios build / endbuild,
+    useref lo concatena y uglifica -->
+
+    <!--build:js scripts/libraries.min.js -->
+      <!-- angular -->
+      <script src="vendor/angular.min.js"></script>
+      <script src="vendor/angular-ui-router.min.js"></script>
+      <script src="vendor/angular-animate.min.js"></script>
+    <!-- endbuild -->
+
+    <!--build:js scripts/app.min.js -->
+      <!-- our app -->
+      <script src="app/app.js"></script>
+      <script src="app/router.js"></script>
+
+      <!-- servicios / factorías -->
+      <script src="app/services/player-factory.js"></script>
+      <script src="app/services/cards-factory.js"></script>
+
+      <!-- componentes -->
+          <!-- common -->
+          <script src="app/components/commons/header/header.js"></script>
+          <script src="app/components/commons/footer/footer.js"></script>
+          <!-- main -->
+          <script src="app/components/main/view-main.js"></script>
+          <!-- game -->
+          <script src="app/components/game/view-game.js"></script>
+          <script src="app/components/game/counter/counter.js"></script>
+          <script src="app/components/game/player-card/player-card.js"></script>
+          <!-- player -->
+          <script src="app/components/player/view-player.js"></script>
+          <!-- about -->
+          <script src="app/components/about/view-about.js"></script>
+    <!-- endbuild -->
+</body>
+
+
+</html>

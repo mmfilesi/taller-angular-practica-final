@@ -1,0 +1,10 @@
+ [
+    {"img": "card_00.jpg", "type": "a", "showCover": true },
+    {"img": "card_01.jpg", "type": "b", "showCover": true },
+    {"img": "card_02.jpg", "type": "c", "showCover": true },
+    {"img": "card_03.jpg", "type": "d", "showCover": true },
+    {"img": "card_04.jpg", "type": "e", "showCover": true },
+    {"img": "card_05.jpg", "type": "g", "showCover": true },
+    {"img": "card_06.jpg", "type": "h", "showCover": true },
+    {"img": "card_07.jpg", "type": "i", "showCover": true }
+]

@@ -1,0 +1,62 @@
+.main-container {
+    max-width: 1200px;
+    border: 1px solid green;
+    padding: 1em;
+}
+
+.view-main {
+    border: 1px solid #cc00cc;
+    padding: 1em;
+}
+
+.main-header {
+    font-size:24px;
+    text-align: center;
+    border: 1px solid red;
+}
+
+.main-footer {
+    text-align: center;
+    border: 1px solid blue;
+    margin: 0.5em;
+    padding:0.2em;
+}
+
+.player-avatar {
+  margin: 0.2em;
+  display: inline-block;
+}
+
+.player-avatar img {
+  width: 50px;
+  height: auto;
+}
+
+.game-cards-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.game-cards-item {
+  cursor: pointer;
+  width: 200px;
+  margin: 0.2em;
+  display: inline-block;
+}
+
+.game-cards-item img {
+  width: 200px;
+  height: auto;
+}
+
+.game-cards-player {
+  border: 1px solid #cc00cc;
+  padding: 0.2em;
+  text-align: center;
+  margin: 0.2em 0;
+}
+
+.game-cards-player img {
+  width: 50px;
+  height: auto;
+}

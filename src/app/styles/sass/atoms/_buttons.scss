@@ -1,0 +1,40 @@
+/* Button */
+.bc-btn {
+  position: relative;
+  display: inline-block;
+  padding: 4px 6px;
+  outline: 0;
+  font-size: 16px;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  &--round {
+    height: $formControlHeight;
+    width: $formControlHeight;
+    padding: 0;
+    line-height: $formControlHeight;
+    border-radius: $formControlHeight / 2;
+  }
+  &--clean {
+    border: 0;
+    background: none;
+  }
+  &--grey {
+    background-color: $bankiaLightGrey;
+    border: 1px solid $bankiaLineGrey;
+    border-radius: 2px;
+  }
+  &[class^="bc-ico-"],
+  &[class*=" bc-ico-"] {
+    &:before {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: $formControlHeight - 12;
+    }
+    &.bc-btn-back {
+      &:before {
+        font-size: $formControlHeight - 5;
+      }
+    }
+  }
+}

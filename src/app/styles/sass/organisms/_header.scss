@@ -1,0 +1,73 @@
+/* Header */
+.ribbon {
+  position: relative;
+  width: 420px;
+  margin: 20px auto 0;
+  animation: main 250ms;
+}
+.ribbon span{
+  display: block;
+  padding: 15px;
+  color: $white;
+  font-family: 'Chango';
+  font-size: 52px;
+  text-align: center;
+  text-transform: uppercase;
+  background: $gameBlue;
+}
+.ribbon i {
+  position: absolute;
+}
+.ribbon i:first-of-type, .ribbon i:nth-of-type(2) {
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+  z-index: -1;
+  border: 20px solid transparent;
+  border-right-color: darken($gameBlue,30%);
+  animation: edge 500ms;
+}
+.ribbon i:nth-of-type(2) {
+  left: auto;
+  right: -20px;
+  border-right-color: transparent;
+  border-left-color: darken($gameBlue,30%);
+}
+.ribbon i:nth-of-type(3), .ribbon i:last-of-type {
+  width: 20px;
+  bottom: -20px;
+  left: -40px;
+  z-index: -2;
+  border: 30px solid darken($gameBlue,10%);
+  border-left-color: transparent;
+  animation: back 600ms;
+  transform-origin: 100% 0;
+}
+.ribbon i:last-of-type {
+  bottom: -20px;
+  left: auto;
+  right: -40px;
+  border: 30px solid darken($gameBlue,10%);
+  border-right-color: transparent;
+  transform-origin: 0 0;
+}
+@keyframes main {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+@keyframes edge {
+  0%, 50% { transform: scaleY(0); }
+  100% { transform: scaleY(1); }
+}
+@keyframes back {
+  0%, 75% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+.main-header-title {
+  transition: transform .4s ease-in-out;
+  transform-origin: left top;
+  &--scale {
+    transform: scale(.5);
+  }
+}

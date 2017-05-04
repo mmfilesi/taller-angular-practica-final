@@ -1,0 +1,28 @@
+<article class="player">
+  <h2>Datos del jugador</h2>
+  <div class="player-info">
+    <div class="form-group">
+      <label for="player-name">Nombre</label>
+      <input class="form-control" id="player-name" type="text" ng-model="viewPlayer.player.name">
+    </div>
+    <div class="form-group">
+      <label for="player-email">E-mail</label>
+      <input class="form-control" id="player-email" type="text" ng-model="viewPlayer.player.email">
+    </div>
+  </div>
+  <div class="player-avatar">
+      <h2>Avatar</h2>
+      <div class="player-avatar-container">
+        <div class="player-avatar-option" ng-repeat="item in viewPlayer.allAvatar">
+          <label for="avatar-{{item.id}}">
+            <input type="radio" ng-model="viewPlayer.player.avatar" value="{{item.img}}" id="avatar-{{item.id}}">
+            <img class="player-avatar-img" ng-src="app/styles/imgs/{{item.img}}">
+            <span>{{item.nick}}</span>
+          </label>
+        </div>
+      </div>
+  </div>
+  <div class="text-center">
+    <button class="btn btn-lg btn-player" ng-click="viewPlayer.actions.goToGame()">Ir al juego</button>
+  </div>
+</article>

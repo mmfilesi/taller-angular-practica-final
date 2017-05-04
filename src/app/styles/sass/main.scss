@@ -1,0 +1,31 @@
+/*!
+ * Vector Academy
+ * 2017 Vector ITC Group
+ */
+
+// Vendor
+@import "vendor/bootstrap/bootstrap";
+
+// Config
+@import "config/vars";
+@import "config/colors";
+// @import "config/normalize";
+@import "config/fonts";
+@import "config/icons";
+@import "config/layout";
+
+// Atoms
+// @import "atoms/buttons";
+
+// Molecules
+// @import "molecules/search";
+
+// Organisms
+@import "organisms/header";
+@import "organisms/footer";
+@import "organisms/intro";
+@import "organisms/player";
+@import "organisms/game-cards";
+
+// Helpers
+// @import "config/helpers";

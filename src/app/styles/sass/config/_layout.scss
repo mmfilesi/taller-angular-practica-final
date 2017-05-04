@@ -1,0 +1,60 @@
+/* Base and Layout */
+// Base styles
+body {
+  min-width: 320px;
+  margin: 0;
+  background-color: $gameBlue;
+  background-image: linear-gradient(to bottom, mix(white,$gameBlue,60%) 0%,mix(white,$gameBlue,40%) 41%,mix(white,$gameBlue,10%) 100%);;
+  -webkit-tap-highlight-color: transparentize($gameBlue,.8);
+}
+a {
+  text-decoration: none;
+}
+body, input, button, textarea {
+  font-family: 'Maven Pro', sans-serif;
+}
+
+// Layout
+html, body {
+  height: 100%;
+}
+main-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+main-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+// .main-container {
+//   display: flex;
+//   flex-direction: column;
+// }
+// ui-view {
+//   display: flex;
+//   flex-grow: 1;
+//   justify-content: center;
+//   align-items: center;
+//   overflow-x: hidden;
+//   overflow-y: auto;
+//   -webkit-overflow-scrolling: touch;
+// }
+view-main {
+  text-align: center;
+}
+
+//Button
+.btn {
+  font-family: 'Chango';
+  background-color: saturate(complement($gameBlue),30%);
+  border-radius: 10px;
+  border-bottom: 4px solid darken(saturate(complement($gameBlue),30%),20%);
+  text-shadow: 1px 1px 1px #333;
+  &, &:hover {
+    color: $white;
+  }
+}

@@ -1,0 +1,26 @@
+<article class="game">
+  <!-- La ficha con los datos elegidos solo se muestra si hay al menos
+  uno definido. Como la condición es algo compleja, la sacamos al controlador -->
+  <player-card ng-if="viewGame.renders.checkCardPlayer()"></player-card>
+
+  <!--
+    Creamos un componente específico para el contador.
+    Este componente recibe por bindings dos valores del componente padre,
+    los aciertos y los fallos.
+  -->
+  <counter ok="viewGame.results.ok" ko="viewGame.results.ko"></counter>
+
+  <!-- list -->
+  <div class="game-cards">
+    <div
+      ng-repeat="item in viewGame.cards"
+      ng-click="viewGame.actions.selectCard(item)"
+      class="game-cards-item">
+      <img ng-src="app/styles/imgs/card_cover.jpg" ng-show="item.showCover">
+      <img ng-src="app/styles/imgs/{{item.img}}" ng-show="!item.showCover">
+    </div>
+  </div>
+  <div ng-show="viewGame.gameIsOver" ng-click="viewGame.actions.playAgain()">
+    ¿Jugar de nuevo?
+  </div>
+</article>

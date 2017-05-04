@@ -1,0 +1,53 @@
+/* Search */
+.bc-search {
+  position: relative;
+  width: calc(100% - 84px);
+  &-predict {
+    position: absolute;
+    left: 0;
+    right: 0;
+    max-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: auto;
+    background-color: #fff;
+    box-shadow: 0 1px 2px $bankiaGrey;
+    z-index: 1;
+  }
+  &--open {
+    .bc-search-predict {
+      max-height: 190px;
+    }
+  }
+  &-input {
+    width: 100%;
+    height: $formControlHeight;
+    font-size: 14px;
+    background-color: #fff;
+    &::-webkit-input-placeholder {
+      color: $bankiaLightText;
+    }
+    &:-moz-placeholder {
+      color: $bankiaLightText;
+      opacity: 1;
+    }
+    &::-moz-placeholder {
+      color: $bankiaLightText;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder {
+      color: $bankiaLightText;
+    }
+  }
+  &-submit {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    width: $formControlHeight;
+    height: $formControlHeight;
+    color: $bankiaLightText;
+    &:before {
+      font-size: $formControlHeight - 8;
+    }
+  }
+}

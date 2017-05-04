@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>angular 1.6 workshop</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="app/styles/main.css">
+</head>
+
+<body ng-app="app" ng-strict-di>
+    <section class="main-container">
+      <main-header></main-header>
+      <ui-view></ui-view>
+      <main-footer></main-footer>
+    </section>
+
+    <!-- Todo lo que se encuentre entre los comentarios build / endbuild,
+    useref lo concatena y uglifica -->
+
+    <script src="scripts/libraries.min.js"></script>
+
+    <script src="scripts/app.min.js"></script>
+</body>
+
+
+</html>
